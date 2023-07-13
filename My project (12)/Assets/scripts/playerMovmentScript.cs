@@ -10,6 +10,7 @@ public class playerMovmentScript : MonoBehaviour
     public float jumpSpeed;
     public float jumpButtonGracePeriod;
 
+    public Rigidbody rigidbody;
     private Animator animator;
     private CharacterController characterController;
     private float ySpeed;
@@ -20,6 +21,7 @@ public class playerMovmentScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        rigidbody = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
         characterController = GetComponent<CharacterController>();
         originalStepOffset = characterController.stepOffset;
